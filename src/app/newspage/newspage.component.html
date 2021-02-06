@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="">LOGO</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" (click)="goToHome()">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="goToBookmark()">Bookmark</a>
+            </li>
+        </ul>
+        <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+                placeholder="Start searching">
+        </div>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div *ngFor="let data of toHeaderDisplay | filter:searchText; let i=index" class="col-lg-12">
+            <div class="box" (click)="addBookmark(data,i)">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="{{data.urlToImage}}" width=100%>
+                    </div>
+                    <div class="col-sm-8">
+                        <h6 class="mt-2 mb-2">{{data.title}}</h6>
+                        <a (click)="gotoDetail(data,i)" style="cursor: pointer;">Read more...</a>
+                    </div>
+                    <div class="col-sm-1"><i class="fa fa-bookmark" aria-hidden="true" style="cursor: pointer;"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

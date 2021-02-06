@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="">LOGO</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link active" aria-current="page"  routerLink="" >Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" >Bookmark</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="box" >
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="{{newsData.urlToImage}}" width=100%>
+                            </div>
+                            <div class="col-sm-9">
+                                <h6 class="mt-2 mb-2">{{newsData.title}}</h6>
+                               
+                                <h6 class="mt-2 mb-2">{{newsData.content}}</h6>
+                                <h6 class="mt-2 mb-2">{{newsData.description}}</h6>
+                                <h6 class="mt-2 mb-2">This should be obvious really, but it's surprising the number of newsletters that are sent out that are just a list of adverts.
+
+                                    Nobody watches TV just for the adverts, no matter how entertaining they might be. So, make sure that you are providing some useful and interesting content that your subscribers might actually want to read.
+                                    
+                                    Now, obviously, you'll want to put adverts in your newsletter too. You have to earn a living, after all. But make sure that there is something else to keep your readers interested, even if that just means special offers.
+                                    
+                                    If you can provide tips and advice, or industry news, these are key things that your subscribers may be interested inPeople receive so many newsletters and other emails these days that you need to make sure that your readers want to read your newsletter as soon as they see it. Otherwise they probably won't read it at all.
+
+                                    Your newsletter literally needs to scream "READ ME FIRST".
+                                    
+                                    Not just "Read me at some point".
+                                    
+                                    If your subscribers can see your subject and think "I'll read that later", they won't read it later. 90% of the time, they'll come back to it later after they've received another batch of emails and it'll just get deleted.
+                                    
+                                    Give them a reason to open it and read it straight away.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Dont Miss The Content</h2>
+<div *ngFor="let data of newArray " class="col-lg-12">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="{{data.urlToImage}}" width=100%>
+            </div>
+            <div class="col-sm-9">
+                <h6 class="mt-2 mb-2">{{data.title}}</h6>
+        </div>
+    </div>
+</div>

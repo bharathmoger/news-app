@@ -1,0 +1,16 @@
+app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+}
+
+app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+  }
+  
